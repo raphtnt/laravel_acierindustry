@@ -249,6 +249,9 @@
                             <th scope="col" class="px-6 py-3">
                                 Heure de retour
                             </th>
+                            <th scope="col" class="px-6 py-3">
+                                Durée
+                            </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -296,6 +299,9 @@
                                 </td>
                                 <td class="px-6 py-4">
                                     {{ $lr->updated_at->isoFormat('DD/MM/YYYY à HH:mm:ss') }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $lr->updated_at->diff($lr->created_at)->format('%H:%I:%S') }}
                                 </td>
                                 {{--                                   <th scope="row" class="flex flex-row items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                                        <img class="w-10 h-10 rounded-full" src="{{ $run->receiveInterim->profile_photo_url }}" alt="logouser">

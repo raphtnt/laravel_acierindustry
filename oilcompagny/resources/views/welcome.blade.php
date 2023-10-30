@@ -1203,15 +1203,6 @@
                 </div>
             @endif
 
-            <div>
-
-                @foreach($classements as $name => $rank)
-                    {{ $name . ' ' . $rank }}<br>
-                @endforeach
-
-            </div>
-
-
             <div class="page-leaderboard">
                 <div id="contain-all" class=" slideout-panel">
                     <header class="header">

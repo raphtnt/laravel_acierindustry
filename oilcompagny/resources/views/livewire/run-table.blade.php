@@ -220,4 +220,120 @@
             </div>
         </div>
     </div>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg" style="padding: 2rem;">
+                <p>Listes des derniers trajets</p>
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <div class="flex items-center justify-between pb-4 bg-white dark:bg-gray-900">
+
+                        <div>
+                            <button type="button" class="text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:focus:ring-yellow-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" x-show="selection.length > 0" x-on:click="$wire.cancel(selection)">Annulé</button>
+                        </div>
+
+                        <label for="table-search" class="sr-only">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                            </div>
+                            <input type="text" id="table-search-users" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users">
+                        </div>
+                    </div>
+
+                    <span x-html="JSON.stringify(selection)"></span>
+
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                Envoie
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Recu
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Intérimaire
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Farm
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Heure départ
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Heure de retour
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        @foreach($lastruns as $lr)
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td>
+                                    <div class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                        <img class="w-10 h-10 rounded-full" src="{{ $lr->sendInterim->profile_photo_url }}" alt="logouser">
+                                        <div class="pl-3">
+                                            <div class="text-base font-semibold">{{ $lr->sendInterim->firstname }} {{ $lr->sendInterim->lastname }}</div>
+                                            <div class="font-normal text-gray-500">Role</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                        <img class="w-10 h-10 rounded-full" src="{{ $lr->receiveInterim->profile_photo_url }}" alt="logouser">
+                                        <div class="pl-3">
+                                            <div class="text-base font-semibold">{{ $lr->receiveInterim->firstname }} {{ $lr->receiveInterim->lastname }}</div>
+                                            <div class="font-normal text-gray-500">Role</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                        <img class="w-10 h-10 rounded-full" src="{{ $lr->interim->profile_photo_url }}" alt="logouser">
+                                        <div class="pl-3">
+                                            <div class="text-base font-semibold">{{ $lr->interim->firstname }} {{ $lr->interim->lastname }}</div>
+                                            <div class="font-normal text-gray-500">Role</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center text-gray-900 whitespace-nowrap dark:text-white">
+                                        <div class="pl-3">
+                                            <div class="text-base font-semibold">{{ $lr->items->name }}</div>
+                                            <div class="font-normal text-gray-500">{{ $lr->quantity }} * {{ $lr->unitprice }} = {{ number_format($lr->quantity *  $lr->unitprice, 0, ' ', ' ') }}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $lr->created_at->isoFormat('DD/MM/YYYY à HH:mm:ss') }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $lr->updated_at->isoFormat('DD/MM/YYYY à HH:mm:ss') }}
+                                </td>
+                                {{--                                   <th scope="row" class="flex flex-row items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                                       <img class="w-10 h-10 rounded-full" src="{{ $run->receiveInterim->profile_photo_url }}" alt="logouser">
+
+                                                                   </th>--}}
+                            </tr>
+
+                        @endforeach
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    {{ $lastruns->links() }}
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

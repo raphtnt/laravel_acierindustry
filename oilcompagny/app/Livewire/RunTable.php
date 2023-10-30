@@ -86,7 +86,8 @@ class RunTable extends Component
     public function render()
     {
         return view('livewire.run-table', [
-            'runs' => Run::where('status', 'LIKE', 'En cours')->get()
+            'runs' => Run::where('status', 'LIKE', 'En cours')->get(),
+            'lastruns' => Run::where('status', 'LIKE', 'Terminé')->limit(50)->paginate(10)
         ]);
     }
 }

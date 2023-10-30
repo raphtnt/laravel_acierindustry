@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/oilcompagny/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/oilcompagny/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/oilcompagny/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/oilcompagny/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/oilcompagny/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/oilcompagny/tests/Unit" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/fruitcake/php-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/guzzlehttp/uri-template" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/jaybizzle/crawler-detect" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/jenssegers/agent" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/fortify" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/jetstream" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/pint" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/prompts" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/league/flysystem-local" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/mobiledetect/mobiledetectlib" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/pragmarx/google2fa" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/spatie/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/spatie/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/spatie/laravel-ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/polyfill-uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/uid" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/oilcompagny/vendor/spatie/laravel-permission" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="alpinejs" level="application" />
+  </component>
+</module>

@@ -181,11 +181,6 @@
                     </table>
                 </div>
 
-                <div>
-                    <p>Raphael Tax</p>
-                    <span class="wsh rounded bg-green-300" style="height: 5rem; width: 5rem;">5000</span>
-                </div>
-
                 <div style="margin-top: 1rem;">
                     {{ $users->links() }}
                 </div>

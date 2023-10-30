@@ -1286,17 +1286,6 @@
                                         </div>
                                 @endforeach
 
-                                    <div class="ranking-table-row">
-                                        <div class="ranking-table-data">
-                                            100
-                                        </div>
-                                        <div class="ranking-table-data">
-                                            Matthew L
-                                        </div>
-                                        <div class="ranking-table-data">
-                                            <div class="complete"></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!--Use Date Formatter-->

@@ -10,9 +10,18 @@ use Illuminate\Http\Request;
 class StatsController extends Controller
 {
     public function stats() {
+
+
 //        dd($this->calculSalary(now()->format('W'), 2, 'Receive'));
 
-        dd($this->userAllSalary());
+//        $user = User::all();
+/*        $z = [];
+        foreach ($user as $u) {
+//            $z[] = $u->interim->where('weeks', '44')->count();
+            $z[] = $u->interim->where('weeks', '44')->count();
+        }
+
+        dd($z);*/
 
         return view('stats.index', [
 //            'userSalary' => $this->userAllSalary(),

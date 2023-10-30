@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\InterimController;
 use App\Http\Controllers\StatsController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+
+    $user = User::all();
+    $t = [];
+    foreach ($user as $u) {
+        $t = array_merge($t, [$u->firstname => $u->interim()->where('weeks', '44')->count()]);
+    }
+    arsort($t);
+
+//    $firstKey = array_keys($t)[0];
+
+    return view('welcome', [
+        "classements" => $t
+    ]);
 });
 
 Route::middleware([

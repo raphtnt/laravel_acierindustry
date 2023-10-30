@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->integer("price");
-            $table->integer("type"); // trajet perso, interimaire, grossiste, vente bourse, vente particulier (7500, 8500)
+            $table->string("type"); // trajet perso, interimaire, grossiste, vente bourse, vente particulier (7500, 8500)
             $table->timestamps();
         });
     }

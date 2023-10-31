@@ -16,6 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @can('interim')
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('vt') }}" :active="request()->routeIs('vt')">
                         {{ __('Vente/Traitement/Remboursement') }}
@@ -60,6 +61,7 @@
                         </x-dropdown>
                     </div>
                 </div>
+                @endcan
             </div>
 
 

@@ -9,8 +9,18 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
               <p class="text-center" style="font-size: 1.75rem;">Stats</p>
-                <p class="info">Depuis le début : 50 trajets</p>
-                <p class="info">Semaine : 50 trajets</p>
+                <p class="info">Depuis le début : {{ Auth::user()->getCountRun()[0] }} trajets</p>
+                <div class="sub">
+                    <p class="info">Annulé : {{ Auth::user()->getCountRun()[1] }}</p>
+                    <p class="info">En cours : {{ Auth::user()->getCountRun()[2] }}</p>
+                    <p class="info">Terminé : {{ Auth::user()->getCountRun()[3] }}</p>
+                </div>
+                <p class="info">Semaine Actuelle : {{ Auth::user()->getCountRunWeeks()[0] }} trajets</p>
+                <div class="sub">
+                    <p class="info">Annulé : {{ Auth::user()->getCountRunWeeks()[1] }}</p>
+                    <p class="info">En cours : {{ Auth::user()->getCountRunWeeks()[2] }}</p>
+                    <p class="info">Terminé : {{ Auth::user()->getCountRunWeeks()[3] }}</p>
+                </div>
             </div>
         </div>
     </div>

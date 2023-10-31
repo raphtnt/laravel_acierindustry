@@ -83,4 +83,37 @@ class User extends Authenticatable
         })->join(' '));
         return 'https://ui-avatars.com/api/?name='.urlencode($firstname).urlencode($lastname).'&color=7F9CF5&background=EBF4FF';
     }
+
+    /**
+     * @return array
+     * 0 : All
+     * 1 : Annulé
+     * 2 : En cours
+     * 3 : Terminé
+     */
+    public function getCountRun() {
+        return [
+            $this->interim()->count(),
+            $this->interim()->where('status' ,'=', 'Annulé')->count(),
+            $this->interim()->where('status' ,'=', 'En cours')->count(),
+            $this->interim()->where('status' ,'=', 'Terminé')->count(),
+        ];
+    }
+
+    /**
+     * @return array
+     * 0 : All
+     * 1 : Annulé
+     * 2 : En cours
+     * 3 : Terminé
+     */
+    public function getCountRunWeeks() {
+        return [
+            $this->interim()->where('weeks', now()->format('W'))->count(),
+            $this->interim()->where([['weeks', now()->format('W')],['status', '=', 'Annulé']])->count(),
+            $this->interim()->where([['weeks', now()->format('W')],['status', '=', 'En cours']])->count(),
+            $this->interim()->where([['weeks', now()->format('W')],['status', '=', 'Terminé']])->count(),
+        ];
+
+    }
 }

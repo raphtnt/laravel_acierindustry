@@ -1217,8 +1217,8 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" >
                         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg boxs">
                             <p class="text-center" style="font-size: 1.75rem;">Nos prix de rachats :</p>
-                            <p class="info">Charbon : {{ $items->where('name', '=', 'Charbon')->first()->price }}</p>
-                            <p class="info">Fer : {{ $items->where('name', '=', 'Fer')->first()->price }}</p>
+                            <p class="info">Charbon : {{ $items->where('name', '=', 'Charbon')->first()->price }}/unité</p>
+                            <p class="info">Fer : {{ $items->where('name', '=', 'Fer')->first()->price }}/unité</p>
                             <p class="info">Carte de fidelité : Prochainement</p>
                         </div>
                     </div>

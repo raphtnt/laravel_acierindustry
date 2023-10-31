@@ -23,7 +23,7 @@ Route::get('/', function () {
     $user = User::all();
     $t = [];
     foreach ($user as $u) {
-        $t = array_merge($t, [$u->firstname[0].'. '.$u->lastname => $u->interim()->where('weeks', now()->format('W'))->count()]);
+        $t = array_merge($t, [$u->firstname[0].'. '.$u->lastname => $u->interim()->where('weeks', now()->format('W'))->where('status', '=', "Terminé")->count()]);
     }
     arsort($t);
 

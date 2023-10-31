@@ -1215,11 +1215,13 @@
                         <div class="contain text-center">
                             <img class="text-center" alt="Android Basics Leaderboard" class="mb-2" src="https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_trophy_leaderboard-3442a4b2312e6cdd02aa9870e636dc082890277a6267c4ed986a750fef7cbb35.svg">
                             <h2>Leaderboard</h2>
-                            <p class="lead">Récompense a gagné :</p>
+                            <p class="lead">Fonctionnement : tout simplement chaque trajet (complet) que vous
+                                faites est comptabilisé. Chaque semaine les lots changes. Le gagnant choisira sont
+                                lot en ceux proposé le deuxieme prendra ce qu'il reste ainsi que la meme chose pour le
+                                troisième</p>
+                            <p class="lead" style="padding-top: 1rem;">Récompense a gagné :</p>
                             <ol>
-                                <li>1) Une voiture</li>
-                                <li>2) JSP</li>
-                                <li>3) JSP</li>
+                                <li>Prochainement</li>
                             </ol>
                         </div>
                     </section>

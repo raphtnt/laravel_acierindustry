@@ -12,3 +12,15 @@
     justify-content: center;
     margin-top: 1rem;
 }
+
+p.info {
+    padding-left: 0.75rem;
+}
+
+p.info::before {
+    content: '- ';
+}
+
+p.info:last-child {
+    padding-bottom: 1rem;
+}

@@ -258,7 +258,10 @@
 
                         @foreach($lastruns as $lr)
 
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" @style([
+                                    'background-color: rgba(75,255,158,0.65);' => $lr->status == 'En cours',
+                                    'background-color: rgb(255,245,173)' => $lr->status == 'Annulé',
+                            ])>
                                 <td>
                                     <div class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                         <img class="w-10 h-10 rounded-full" src="{{ $lr->sendInterim->profile_photo_url }}" alt="logouser">

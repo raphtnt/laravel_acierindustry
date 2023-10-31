@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\InterimController;
 use App\Http\Controllers\StatsController;
+use App\Models\Run;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,7 +42,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard', [
+            'lastruns' => Run::where('user_id_interim', 'LIKE', Auth::id())->orderBy('updated_at', 'DESC')->paginate(5)
+        ]);
     })->name('dashboard');
 });
 

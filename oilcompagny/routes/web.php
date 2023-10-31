@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\InterimController;
 use App\Http\Controllers\StatsController;
+use App\Models\Items;
 use App\Models\Run;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,12 @@ Route::get('/', function () {
 
     return view('welcome', [
         "classements" => $t
+    ]);
+})->name('welcome');
+
+Route::get('/price', function () {
+    return view('price', [
+        'items' => Items::all()
     ]);
 });
 

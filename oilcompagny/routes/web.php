@@ -78,7 +78,7 @@ Route::prefix('/interim')->controller(InterimController::class)->group(function 
 
 });
 
-Route::get('/statss', 'stats')->name('stats');
+Route::get('/statss', 'stats@StatsController')->name('stats');
 
 Route::prefix('/stats')->controller(StatsController::class)->group(function () {
     Route::group(['middleware' => ['permission:stats']], function () {

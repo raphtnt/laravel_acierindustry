@@ -71,6 +71,11 @@ Route::prefix('/interim')->controller(InterimController::class)->group(function 
         })->name('vt');
 
     });
+
+    Route::group(['middleware' => ['permission:interim.edit']], function () {
+        Route::post('/create', 'interimCreatePost');
+    });
+
 });
 
 Route::prefix('/stats')->controller(StatsController::class)->group(function () {

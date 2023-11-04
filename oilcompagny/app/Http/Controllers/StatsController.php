@@ -14,7 +14,21 @@ class StatsController extends Controller
 
 //        dd($this->calculSalary(now()->format('W'), 2, 'Receive'));
 
-//        $user = User::all();
+        $user = User::all();
+        $t = [];
+        foreach ($user as $u) {
+            foreach ($u->getRoleNames() as $z) {
+                if($z == "*") {
+                    $send = $this->calculSalary(now()->format('W'), $u->id, 'Send');
+                    $receive = $this->calculSalary(now()->format('W'), $u->id, 'Receive');
+                    $traitement = $this->calculSalary(now()->format('W'), $u->id, 'Traitement');
+                    $vente = $this->calculSalary(now()->format('W'), $u->id, 'Vente');
+                    $c = $send + $receive + $traitement + $vente;
+                    $t = array_merge($t, [$u->firstname.' '.$u->lastname => number_format($c, 0, " ", " ")]);
+                }
+            }
+        }
+        arsort($t);
 /*        $z = [];
         foreach ($user as $u) {
 //            $z[] = $u->interim->where('weeks', '44')->count();
@@ -24,11 +38,7 @@ class StatsController extends Controller
         dd($z);*/
 
         return view('stats.index', [
-//            'userSalary' => $this->userAllSalary(),
-//            'receive' => $this->calculSalary(now()->format('W'), 2, 'Receive'),
-//            'send' => $this->calculSalary(now()->format('W'), 2, 'Send'),
-//            'vente' => $this->calculSalary(now()->format('W'), 2, 'Vente'),
-//            'traitement' => $this->calculSalary(now()->format('W'), 2, 'Traitement'),
+            'salaire' => $t
         ]);
     }
 

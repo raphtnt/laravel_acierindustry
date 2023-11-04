@@ -10,7 +10,9 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 <p>Stats</p>
 
-
+                @foreach($salaire as $name => $value)
+                    <p>{{ $name }} | {{ $value }}</p>
+                @endforeach
 
             </div>
         </div>

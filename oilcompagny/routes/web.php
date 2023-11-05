@@ -79,7 +79,8 @@ Route::prefix('/interim')->controller(InterimController::class)->group(function 
 });
 
 Route::prefix('/paie')->controller(StatsController::class)->group(function () {
-    Route::get('/stats', 'stats')->name('stats');
+    Route::get('/stats/{weeks?}', 'stats')->name('stats');
+    Route::get('/stock', 'stock')->name('stock');
 });
 
 Route::prefix('/stats')->controller(StatsController::class)->group(function () {

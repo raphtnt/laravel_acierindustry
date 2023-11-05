@@ -9,8 +9,11 @@ use Illuminate\Http\Request;
 
 class StatsController extends Controller
 {
-    public function stats() {
+    public function stats(?int $weeks = null) {
 
+        if($weeks == null) {
+            $weeks = now()->format('W');
+        }
 
 //        dd($this->calculSalary(now()->format('W'), 2, 'Receive'));
 
@@ -19,10 +22,10 @@ class StatsController extends Controller
         foreach ($user as $u) {
             foreach ($u->getRoleNames() as $z) {
                 if($z == "*") {
-                    $send = $this->calculSalary(now()->format('W'), $u->id, 'Send');
-                    $receive = $this->calculSalary(now()->format('W'), $u->id, 'Receive');
-                    $traitement = $this->calculSalary(now()->format('W'), $u->id, 'Traitement');
-                    $vente = $this->calculSalary(now()->format('W'), $u->id, 'Vente');
+                    $send = $this->calculSalary($weeks, $u->id, 'Send');
+                    $receive = $this->calculSalary($weeks, $u->id, 'Receive');
+                    $traitement = $this->calculSalary($weeks, $u->id, 'Traitement');
+                    $vente = $this->calculSalary($weeks, $u->id, 'Vente');
                     $c = $send + $receive + $traitement + $vente;
                     $t = array_merge($t, [$u->firstname.' '.$u->lastname => number_format($c, 0, " ", " ")]);
                 }
@@ -39,6 +42,27 @@ class StatsController extends Controller
 
         return view('stats.index', [
             'salaire' => $t
+        ]);
+    }
+
+    public function stock() {
+
+        $st = Run::all()->where('status', '=' ,'Traitement');
+        $sv = Run::all()->where('status', '=' ,'Vente');
+
+        $acier = 0;
+        foreach ($st as $t) {
+            $acier = $acier + $t->quantity;
+        }
+
+        $vente = 0;
+        foreach ($st as $t) {
+            $vente = $vente + $t->quantity;
+        }
+
+
+        return view('stats.stock', [
+            'acier' => ($acier - $vente),
         ]);
     }
 

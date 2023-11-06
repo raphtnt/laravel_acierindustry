@@ -64,7 +64,7 @@ Route::prefix('/interim')->controller(InterimController::class)->group(function 
     Route::group(['middleware' => ['permission:interim']], function () {
         Route::get('/list', 'interimList')->name('interim.list');
         Route::get('/create', 'interimCreate')->name('interim.create');
-        Route::post('/create', 'interimCreatePost');
+//        Route::post('/create', 'interimCreatePost');
         Route::get('/run', 'interimRun')->name('interim.run');
 
         Route::get('/vt', function () {

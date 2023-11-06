@@ -123,6 +123,7 @@ class StatsController extends Controller
                 }
 
                 return $s * Items::where('name', '=', 'Vente')->first()->price;
+
         }
 
 

@@ -11,6 +11,7 @@ class VenteForm extends Component
 {
 
     public int $quantity = 0;
+    public int $bourse = 0;
     public $type = "Traitement";
 
     public function save() {
@@ -18,7 +19,7 @@ class VenteForm extends Component
         $price = 0;
         switch ($this->type) {
             case "Vente":
-                $price = Items::where('type', '=', 'Vente')->first()->price;
+                $price = $this->bourse;
                 break;
             case "Traitement":
                 $price = Items::where('type', '=', 'Traitement')->first()->price;
@@ -39,6 +40,7 @@ class VenteForm extends Component
             'years' => now()->format('Y')
         ]);
 
+        session()->flash('success', 'Ajout effectué !');
 
     }
 

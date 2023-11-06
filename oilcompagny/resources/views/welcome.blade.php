@@ -1223,7 +1223,7 @@
                             </p>
                             <p class="lead" style="padding-top: 1rem;">Récompense a gagné :</p>
                             <ol>
-                                @forelse($classements as $c)
+                                @forelse($concours as $c)
                                     <li>{{ $c->name }}</li>
                                 @empty
                                     <p>Prochainement</p>

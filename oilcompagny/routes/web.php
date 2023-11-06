@@ -33,7 +33,8 @@ Route::get('/', function () {
 //    $firstKey = array_keys($t)[0];
 
     return view('welcome', [
-        "classements" => $t
+        "classements" => $t,
+        "concours" => Items::all()->where('price', '=' , '1')->where('type', '=', 'Concours')
     ]);
 })->name('welcome');
 

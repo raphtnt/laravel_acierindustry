@@ -38,6 +38,23 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
+Route::get('/{weeks}', function (?int $weeks) {
+
+    $user = User::all();
+    $t = [];
+    foreach ($user as $u) {
+        $t = array_merge($t, [$u->firstname[0].'. '.$u->lastname => $u->interim()->where('weeks', $weeks)->where('status', '=', "Terminé")->count()]);
+    }
+    arsort($t);
+
+//    $firstKey = array_keys($t)[0];
+
+    return view('welcome', [
+        "classements" => $t,
+        "concours" => Items::all()->where('price', '=' , '1')->where('type', '=', 'Concours')
+    ]);
+})->name('welcome');
+
 Route::get('/price', function () {
     return view('price', [
         'items' => Items::all()

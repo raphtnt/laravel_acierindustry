@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Items;
 use App\Models\Run;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -55,8 +56,16 @@ class RunTable extends Component
         $run->save();
 
         $paie = ($calcul * $unitprice);
+
+
+        $it = User::find($run->user_id_interim);
+
+        if($it->hasPermissionTo('Carte de fidelite')) {
+            $paie = $paie * 1.25;
+        }
+
         if($this->repair) {
-            $paie = ($calcul * $unitprice) - 75000;
+            $paie = $paie - 75000;
         }
 
         session()->flash('danger', 'Vous devez payé ' . number_format($paie, 0, " ", " ") . '€');

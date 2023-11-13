@@ -38,7 +38,7 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
-Route::get('/{weeks}', function (?int $weeks) {
+Route::get('/concours/{weeks?}', function (?int $weeks) {
 
     $user = User::all();
     $t = [];
